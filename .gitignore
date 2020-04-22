@@ -1,0 +1,4 @@
+# Custom ignoring for this repo
+
+#virtual env
+/dsdk-demo/
