@@ -1,5 +1,5 @@
 repository:
-  module: dagster_examples
+  module: dagster_examples.repo
   fn: define_demo_repo
 scheduler:
   module: dagster_examples.schedules
