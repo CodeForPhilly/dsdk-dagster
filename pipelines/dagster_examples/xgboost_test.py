@@ -1,5 +1,5 @@
 from xgboost import XGBClassifier
-import dill
+import pickle
 import csv
 import os
 
@@ -8,7 +8,7 @@ from dagster import execute_pipeline, pipeline, solid
 
 @solid
 def load_data(_):
-    dataset_path = os.path.join(os.path.abspath("."), "test_data.csv")
+    dataset_path = os.path.join(os.path.abspath("."), "dagster_examples/test_data.csv")
     with open(dataset_path, "r") as fd:
         data = [row for row in csv.DictReader(fd)]
     return data
@@ -16,8 +16,9 @@ def load_data(_):
 
 @solid
 def apply_model(_, data):
-    with open(f'model_dill.dat', 'rb') as f:
-        model = dill.load(f)
+    infile = open('dagster_examples/model_pickle.dat','rb')
+    model = pickle.load(infile)
+    infile.close()
     pred = model.predict(data)
     predictions = [round(value) for value in pred]
     return predictions
