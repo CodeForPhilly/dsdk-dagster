@@ -1,5 +1,5 @@
 from xgboost import XGBClassifier
-import _pickle as cPickle
+import dill
 import csv
 import os
 
@@ -16,8 +16,8 @@ def load_data(_):
 
 @solid
 def apply_model(_, data):
-    with open(f'xgboost_model', 'rb') as f:
-        model = cPickle.load(f)
+    with open(f'model_dill.dat', 'rb') as f:
+        model = dill.load(f)
     pred = model.predict(data)
     predictions = [round(value) for value in pred]
     return predictions

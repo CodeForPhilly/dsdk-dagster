@@ -2,3 +2,6 @@
 
 #virtual env
 /dsdk-demo/
+
+#python cache
+__pycache__/
