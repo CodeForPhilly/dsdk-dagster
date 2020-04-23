@@ -1,10 +1,10 @@
 FROM python:3.7-slim
 
-RUN apt-get update && apt-get install -yqq cron curl
+RUN apt-get update && apt-get install -yqq cron curl libgomp1
 
 RUN mkdir -p /opt/dagster/dagster_home /opt/dagster/app
 
-RUN pip install dagit dagster_postgres dagster_cron ipdb
+RUN pip install dagit dagster_postgres dagster_cron ipdb xgboost
 
 WORKDIR /opt/dagster/startup
 
