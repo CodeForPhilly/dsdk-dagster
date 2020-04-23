@@ -1,9 +1,7 @@
 repository:
-  module: dagster_examples.repos
+  module: dagster_examples
+  file: repos.py
   fn: define_repo
 scheduler:
   module: dagster_examples.scheduler
   fn: cereal_schedules
-repository:
-  module: xgboost_example.repos
-  fn: define_repo
