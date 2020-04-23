@@ -22,6 +22,7 @@ def apply_model(_, data):
     predictions = [round(value) for value in pred]
     return predictions
 
+#need to add actuals to build solid for showing model accuracy to test results display
 # @solid
 # def success_rate
 #     dataset_path = os.path.join(os.path.abspath("."), "dsdk_models/")

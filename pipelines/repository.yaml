@@ -4,3 +4,6 @@ repository:
 scheduler:
   module: dagster_examples.scheduler
   fn: cereal_schedules
+repository:
+  module: xgboost_example.repos
+  fn: define_repo
