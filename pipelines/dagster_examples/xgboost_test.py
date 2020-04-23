@@ -8,7 +8,7 @@ from dagster import execute_pipeline, pipeline, solid
 
 @solid
 def load_data(_):
-    dataset_path = os.path.join(os.path.abspath("."), "dsdk_models/test_data.csv")
+    dataset_path = os.path.join(os.path.abspath("."), "test_data.csv")
     with open(dataset_path, "r") as fd:
         data = [row for row in csv.DictReader(fd)]
     return data
@@ -16,7 +16,7 @@ def load_data(_):
 
 @solid
 def apply_model(_, data):
-    with open(f'dsdk_models/xgboost', 'rb') as f:
+    with open(f'xgboost_model', 'rb') as f:
         model = cPickle.load(f)
     pred = model.predict(data)
     predictions = [round(value) for value in pred]

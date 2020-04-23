@@ -14,7 +14,7 @@ from xgboost_test import demo_pipeline
 
 def define_repo():
     return RepositoryDefinition(
-        name='test_repo',
+        name='hello_cereal_pipeline',
         # Note that we can pass a function, rather than pipeline instance.
         # This allows us to construct pipelines lazily, if, e.g.,
         # initializing a pipeline involves any heavy compute
