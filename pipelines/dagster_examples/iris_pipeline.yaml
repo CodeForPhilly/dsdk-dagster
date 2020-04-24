@@ -3,5 +3,5 @@ storage:
   solids:
     download_file:
       config:
-        path: "iris.data"
+        path: "dagster_examples/iris.data"
         url: "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"

@@ -6,7 +6,7 @@ from dagster.utils import script_relative_path
 
 k_means_iris_solid = dm.define_dagstermill_solid(
     'k_means_iris',
-    script_relative_path('dagster_examples/iris-kmeans.ipynb'),
+    script_relative_path('dagster_examples/iris-kmeans_2.ipynb'),
     input_defs=[InputDefinition('path', Path, description='Local path to the Iris dataset')],
 )
 

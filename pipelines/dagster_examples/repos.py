@@ -23,6 +23,6 @@ def define_repo():
             "hello_cereal_pipeline": lambda: hello_cereal_pipeline,
             "complex_pipeline": lambda: complex_pipeline,
             "demo_pipeline": lambda: demo_pipeline,
-            "iris_pipeline": lambda: define_iris_pipeline
+            "iris_pipeline": lambda: define_iris_pipeline,
         },
     )
