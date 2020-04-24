@@ -10,7 +10,7 @@ sys.path.append(script_relative_path("."))
 from hello_cereal import hello_cereal_pipeline
 from complex_pipeline import complex_pipeline
 from xgboost_test import demo_pipeline
-from iris_pipeline import define_iris_pipeline
+from iris_pipeline import iris_pipeline
 
 
 def define_repo():
@@ -23,6 +23,6 @@ def define_repo():
             "hello_cereal_pipeline": lambda: hello_cereal_pipeline,
             "complex_pipeline": lambda: complex_pipeline,
             "demo_pipeline": lambda: demo_pipeline,
-            "iris_pipeline": lambda: define_iris_pipeline
+            "iris_pipeline": lambda: iris_pipeline,
         },
     )
